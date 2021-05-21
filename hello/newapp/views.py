@@ -15,3 +15,5 @@ def services(request):
     return HttpResponse("this is the servicespage")
 def helloworld(request):
     return HttpResponse("Hello World")
+def connectwithus(request):
+    return HttpResponse("connect with us")
