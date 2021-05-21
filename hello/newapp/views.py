@@ -5,7 +5,7 @@ def index(request):
     context={
         "variable":"this is sent"
     }
-    return render(request,"index.htm")
+    return render(request,"index.htm",context)
     #return HttpResponse("this is the homepage")
 def about(request):
     return HttpResponse("this is the aboutpage")
