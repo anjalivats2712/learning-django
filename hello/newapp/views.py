@@ -7,6 +7,8 @@ def index(request):
     }
     return render(request,"index.htm",context)
     #return HttpResponse("this is the homepage")
+def home(request):
+    return render(request,"index.htm")
 def about(request):
     return render(request,"about.htm")
     #return HttpResponse("this is the aboutpage")

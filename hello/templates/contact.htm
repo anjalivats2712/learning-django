@@ -1,3 +1,30 @@
 {%extends 'base.htm' %}
 {%block title %} contact us {%endblock title %}
-{%block body %} this is contact page {%endblock body %}
+{%block body %}
+<div class ="container-fluid my-4 px-0">
+    <img src="https://source.unsplash.com/900x200/?phone,contact" class="d-block w-100" alt="..." >
+</div>
+<h1 class="text-center" >CONTACT US</h1>
+<div class="container">
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputQuery1" class="form-label">Your Query</label>
+            <input type="query" class="form-control" id="exampleInputQuery1" name="query" aria-describedby="QueryHelp">
+            <div id="QueryHelp" class="form-text">You can ask all your queries here!</div>
+          </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="notify">
+          <label class="form-check-label" for="exampleCheck1">Notify Me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+
+ {%endblock body %}
