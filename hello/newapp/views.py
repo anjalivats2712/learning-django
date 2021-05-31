@@ -13,6 +13,10 @@ def about(request):
     return render(request,"about.htm")
     #return HttpResponse("this is the aboutpage")
 def contact(request):
+    if request=="POST":
+        email=request.POST.get("email")
+        query=request.POST.get("query")
+        notify=request.POST.get("notify")
     return render(request,"contact.htm")
     #return HttpResponse("this is the contactpage")
 def flavours(request):
