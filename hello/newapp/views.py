@@ -1,4 +1,6 @@
 from django.shortcuts import render,HttpResponse
+from datetime import datetime
+from newapp.models import Contact
 
 # Create your views here.
 def index(request):
@@ -17,6 +19,9 @@ def contact(request):
         email=request.POST.get("email")
         query=request.POST.get("query")
         notify=request.POST.get("notify")
+        contact=Contact(email=email,query=query,notify=notify,date=datetime.today())
+        contact.save()
+
     return render(request,"contact.htm")
     #return HttpResponse("this is the contactpage")
 def flavours(request):
