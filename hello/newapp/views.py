@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from datetime import datetime
+#from datetime import datetime
 from newapp.models import Contact
 
 # Create your views here.
@@ -15,11 +15,12 @@ def about(request):
     return render(request,"about.htm")
     #return HttpResponse("this is the aboutpage")
 def contact(request):
-    if request=="POST":
+    if request.method=="POST":
         email=request.POST.get("email")
         query=request.POST.get("query")
-        notify=request.POST.get("notify")
-        contact=Contact(email=email,query=query,notify=notify,date=datetime.today())
+        #notify=request.POST.get("notify")
+        contact=Contact(email=email,query=query)
+        #date=datetime.today()
         contact.save()
 
     return render(request,"contact.htm")
